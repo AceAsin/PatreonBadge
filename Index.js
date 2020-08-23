@@ -7,13 +7,7 @@ const server = http.createServer(async (request, response) => {
   
   const [ _, username, usePledges ] = request.url.split("/");
 
-  if (!username) {
-    
-    response.writeHead(500, { 'Content-Type': 'application/json' });
-    response.write(JSON.stringify({"error": 'username must be set.'}));
-    return;
-
-  }
+  if (!username) return response.writeHead(500, { 'Content-Type': 'application/json' }), response.write(JSON.stringify({"error": 'username must be set.'}));
 
   const { data } = await httpie.get('https://patreon.com/' + username);
 
