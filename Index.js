@@ -19,7 +19,7 @@ const server = http.createServer(async (request, response) => {
 
   const { document } = (new JSDOM(data)).window;
 
-  const message = (usePledges) ? document.querySelector('[data-tag="CampaignPatronEarningStats-earnings"] h2').innerHTML + "/mo" : document.querySelector('[data-tag="CampaignPatronEarningStats-patron-count"] h2').innerHTML;
+  const message = (usePledges) ? document.querySelector('[data-tag="CampaignPatronEarningStats-earnings"] h2').innerHTML + "/mo" : document.querySelector('[data-tag="CampaignPatronEarningStats-patron-count"] h2').innerHTML + " patrons";
 
   const res = {
     schemaVersion: 1,
@@ -38,4 +38,4 @@ const server = http.createServer(async (request, response) => {
 });
 
 server.listen(Port);
-console.log("Listening on", Port);
+console.log("Listening on port", Port);
