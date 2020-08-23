@@ -24,10 +24,7 @@ const server = http.createServer(async (request, response) => {
   const res = {
     schemaVersion: 1,
     label: "Patreon",
-    namedLogo: "Patreon",
-    message: message,
-    color: "FFFFFF", // FF5441
-    logoColor: "FFFFFF",
+    namedLogo: "Facebook",
     cacheSeconds: 300
   };
 
