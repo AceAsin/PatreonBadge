@@ -19,14 +19,14 @@ const server = http.createServer(async (request, response) => {
 
   const { document } = (new JSDOM(data)).window;
 
-  const message = (usePledges) ? document.querySelector('[data-tag="CampaignPatronEarningStats-earnings"] h2').innerHTML + "/mo" : document.querySelector('[data-tag="CampaignPatronEarningStats-patron-count"] h2').innerHTML + " patrons";
+  const message = (usePledges) ? document.querySelector('[data-tag="CampaignPatronEarningStats-earnings"] h2').innerHTML + "/mo" : document.querySelector('[data-tag="CampaignPatronEarningStats-patron-count"] h2').innerHTML;
 
   const res = {
     schemaVersion: 1,
     label: "Patreon",
     namedLogo: "Patreon",
     message: message,
-    color: "FF5441",
+    color: "FFFFFF", // FF5441
     logoColor: "FFFFFF",
     cacheSeconds: 300
   };
