@@ -1,13 +1,19 @@
 const http = require('http');
 const httpie = require('httpie');
 const JSDOM = require('jsdom').JSDOM;
-const Port = process.env.Port || 8888;
+const Port = process.env.PORT || 8888;
 
 const server = http.createServer(async (request, response) => {
 
   const [ _, username, usePledges ] = request.url.split("/");
 
-  if (!username) return response.writeHead(500, { 'Content-Type': 'application/json' }), response.write(JSON.stringify({"error": 'username must be set.'}));
+  if (!username) {
+    
+    response.writeHead(500, { 'Content-Type': 'application/json' });
+    response.write(JSON.stringify({"error": 'username must be set.'}));
+    return;
+
+  }
 
   const { data } = await httpie.get('https://patreon.com/' + username);
 
@@ -17,11 +23,11 @@ const server = http.createServer(async (request, response) => {
 
   const res = {
     schemaVersion: 1,
-    label: 'Patreon',
-    namedLogo: 'Patreon',
+    label: "Patreon",
+    namedLogo: "Patreon",
     message: message,
-    color: 'FF5441',
-    logoColor: 'FFFFFF',
+    color: "FF5441",
+    logoColor: "FFFFFF",
     cacheSeconds: 300
   };
 
