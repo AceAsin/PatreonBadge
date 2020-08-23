@@ -20,8 +20,9 @@ const server = http.createServer(async (request, response) => {
     label: 'Patreon',
     namedLogo: 'Patreon',
     message: message,
-    color: 'FFFFFF', //FF5441
-    cacheSeconds: 60 * 60 * 8 // 8 hours
+    color: 'FF5441',
+    logoColor: 'FFFFFF',
+    cacheSeconds: 300
   };
 
   response.writeHead(200, { 'Content-Type': 'application/json' });
