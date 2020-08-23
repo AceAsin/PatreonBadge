@@ -2,6 +2,6 @@
   "name": "Shields.io Patreon endpoint",
   "description": "Shields.io endpoint to display amount of donations/patrons you have on Patreon",
   "repository": "https://github.com/AceAsin/Patreon",
-  "keywords": ["shieldsio", "patreon"],
+  "keywords": ["aceasin", "patreon"],
   "env": {}
 }

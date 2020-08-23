@@ -13,7 +13,7 @@
     "url": "git+ssh://git@github.com/AceAsin/Patreon.git"
   },
   "keywords": [
-    "shieldsio",
+    "aceasin",
     "patreon"
   ],
   "author": "Endel Dreyer",
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/AceAsin/Patreon#readme",
   "dependencies": {
-    "httpie": "^1.0.1",
+    "httpie": "^1.1.2",
     "jsdom": "^13.2.0"
   }
 }
