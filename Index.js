@@ -13,7 +13,7 @@ const server = http.createServer(async (request, response) => {
 
   const { document } = (new JSDOM(data)).window;
 
-  const message = (usePledges) ? document.querySelector('[data-tag="CampaignPatronEarningStats-earnings"] h2').innerHTML.replace(/$/, '$ ') + " / MO" : document.querySelector('[data-tag="CampaignPatronEarningStats-patron-count"] h2').innerHTML + "Patrons";
+  const message = (usePledges) ? document.querySelector('[data-tag="CampaignPatronEarningStats-earnings"] h2').innerHTML.replace(/$/, '$ ') + " / MO" : document.querySelector('[data-tag="CampaignPatronEarningStats-patron-count"] h2').innerHTML + " Patrons";
 
   const res = {
     schemaVersion: 1,
