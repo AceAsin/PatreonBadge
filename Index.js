@@ -5,7 +5,7 @@ const Port = process.env.PORT || 8888;
 
 const server = http.createServer(async (request, response) => {
 
-  const [ _, username, usePledges ] = request.url.split("/");
+  const [ _, username, usePledges ] = request.url.split('/');
 
   if (!username) return response.writeHead(500, { 'Content-Type': 'application/json' }), response.write(JSON.stringify({"error": 'username must be set.'}));
 
@@ -13,15 +13,17 @@ const server = http.createServer(async (request, response) => {
 
   const { document } = (new JSDOM(data)).window;
 
-  const message = (usePledges) ? document.querySelector('[data-tag="CampaignPatronEarningStats-earnings"] h2').innerHTML + " / MO" : document.querySelector('[data-tag="CampaignPatronEarningStats-patron-count"] h2').innerHTML + " Patrons";
+  const message = (usePledges) ? document.querySelector('[data-tag="CampaignPatronEarningStats-earnings"] h2').innerHTML + ' / MO' : document.querySelector('[data-tag="CampaignPatronEarningStats-patron-count"] h2').innerHTML + ' Patrons';
+
+  if (message.includes('$')) message.toString().replace(/$/g, '$ ');
 
   const res = {
     schemaVersion: 1,
-    label: "Patreon",
-    namedLogo: "Patreon",
-    message: message.replace(/$/, '$ '),
-    color: "FF5441",
-    logoColor: "FF5441",
+    label: 'Patreon',
+    namedLogo: 'Patreon',
+    message: message,
+    color: 'FF5441',
+    logoColor: 'FF5441',
     cacheSeconds: 300
   };
 
@@ -32,4 +34,4 @@ const server = http.createServer(async (request, response) => {
 });
 
 server.listen(Port);
-console.log("Listening on port", Port);
+console.log('Listening on port', Port);
