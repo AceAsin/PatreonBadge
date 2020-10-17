@@ -6,8 +6,6 @@
 
 ## Attention
 
----
-
 ### Note
 
 - Important
@@ -38,8 +36,6 @@
 
 ## Help
 
----
-
 ### Identification
 
 1. `To get your campaign <ID>, you will need to go to your Patreon page.`
@@ -54,8 +50,6 @@
 
 ## Documentation
 
----
-
 - Shields
   > Please visit [shields](https://shields.io/#/endpoint) for full documentation on endpoint usage.
 
@@ -63,8 +57,6 @@
   > Please visit [patreon](https://docs.patreon.com/#api-endpoints) for full documentation on endpoint usage.
 
 ## Heroku API
-
----
 
 ### Endpoint
 
@@ -116,8 +108,6 @@
   [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
 
 ## Patreon API
-
----
 
 ### Endpoint
 
