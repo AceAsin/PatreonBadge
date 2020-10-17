@@ -8,31 +8,21 @@
 
 ### Note
 
-- Important
+- **Important**
 
-  ```TXT
-  For usage, replace any text inside angle brackets with your own, usually '<Username>' and or '<ID>'. Don't forget to exclude the angle brackets, please do not include '<' or '>' once the text inside has been replaced.
-  ```
+  For usage, replace any text inside angle brackets with your own, usually '\<Username>' and or '\<ID>'. Don't forget to exclude the angle brackets, please do not include '<' or '>' once the text inside has been replaced.
 
-- Heroku API
+- **Heroku API**
 
-  ```TXT
   I recommend to host your own version of this repository on your Heroku account if you want the app to be on 24/7. It is hosted on a free account, so at the end of each month it will probably not be online due to usage, since a free account with a credit/debit card attached for billing can only get up to 1000 hours/month. I can also turn it off at any given time that I wish for.
-  ```
 
-- Patreon API
+- **Patreon API**
 
-  ```TXT
-  You will need to get your campaign <ID> in order to use the second method, which utilizes Patreon's Official API. You are also not able to get the monthly pledge sum if your earnings are set to private, and instead will be welcomed with an error message. It is recommended to set your earnings to public in order to be able to get the pledge sum.
-  ```
+  You will need to get your campaign \<ID> in order to use the second method, which utilizes Patreon's Official API. You are also not able to get the monthly pledge sum if your earnings are set to private, and instead will be welcomed with an error message. It is recommended to set your earnings to public in order to be able to get the pledge sum.
 
-  ```TXT
   The second method is easier and more flexible if you want to change the prefix and suffix on the fly, without having to update any files, only the dynamic badge url. You also don't have to setup anything in advance, like host your own endpoint.
-  ```
 
-  ```TXT
   The second method is also more consistant and reliable, since if hosting on Heroku, web apps love to go to sleep after a while. If nobody is using or going into a page that utilizes the app, then it will fall asleep. You might notice that if hosting the app after a while when you visit your page, it will not display the badge, due to the app falling asleep, but reloading the page will display it, since the app has been awoken from a recent visit.
-  ```
 
 ## Help
 
