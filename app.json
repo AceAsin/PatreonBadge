@@ -1,7 +1,7 @@
 {
-  "name": "Shields.io Patreon endpoint",
-  "description": "Shields.io endpoint to display amount of donations/patrons you have on Patreon",
-  "repository": "https://github.com/AceAsin/Patreon",
-  "keywords": ["aceasin", "patreon"],
+  "name": "Patreon Badge",
+  "description": "Shields badge that utilizes a Heroku endpoint or Patreon endpoint to display patron count or pledge sum.",
+  "repository": "https://github.com/AceAsin/PatreonBadge",
+  "keywords": ["aceasin", "patreon", "heroku", "shields", "badge"],
   "env": {}
 }

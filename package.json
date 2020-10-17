@@ -10,18 +10,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/AceAsin/Patreon.git"
+    "url": "git+ssh://git@github.com/AceAsin/PatreonBadge.git"
   },
   "keywords": [
     "aceasin",
-    "patreon"
+    "patreon",
+    "heroku",
+    "shields",
+    "badge"
   ],
-  "author": "Endel Dreyer",
+  "author": "Ace Asin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AceAsin/Patreon/issues"
+    "url": "https://github.com/AceAsin/PatreonBadge/issues"
   },
-  "homepage": "https://github.com/AceAsin/Patreon#readme",
+  "homepage": "https://github.com/AceAsin/PatreonBadge#readme",
   "dependencies": {
     "httpie": "^1.1.2",
     "jsdom": "^13.2.0"
