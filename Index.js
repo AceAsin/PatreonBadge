@@ -13,10 +13,10 @@ const server = http.createServer(async (request, response) => {
 
   const { document } = (new JSDOM(data)).window;
 
-  const message = (usePledges) ? document.querySelector('[data-tag="CampaignPatronEarningStats-earnings"] h2').innerHTML + 'USD / MO' : document.querySelector('[data-tag="CampaignPatronEarningStats-patron-count"] h2').innerHTML + ' Patrons';
+  let message = (usePledges) ? `${document.querySelector('[data-tag="CampaignPatronEarningStats-earnings"] h2').innerHTML} USD / MO`.replace(/$/g, '$ ') : `${document.querySelector('[data-tag="CampaignPatronEarningStats-patron-count"] h2').innerHTML} Patrons`;
   console.log('original', message);
-  if (message.includes('$')) message.toString().replace('$', '$ ');
-  console.log('changed', message);
+  // if (message.includes('$')) message = message.replace('$', '$ ');
+  // console.log('changed', message);
   const res = {
     schemaVersion: 1,
     label: 'Patreon',
