@@ -14,7 +14,7 @@
 
 - Heroku API
 
-  I recommend to host your own version of this repository on your Heroku account if you want the app to be on 24/7. It is hosted on a free account, so at the end of each month it will probably not be online due to usage, since a free account with a credit/debit card attached for billing can only get up to 1000 hours/month. I can also turn it off at any given time that I wish for.
+  I recommend to host your own version of this repository on your Heroku account if you want the app to stay on 24/7. It is hosted on a free account, so at the end of each month it will probably not be online due to usage, since a free account with a credit/debit card attached for billing can only get up to 1000 hours/month. I can also turn it off at any given time that I wish for.
 
 - Patreon API
 
@@ -26,6 +26,10 @@
 
 ## Help
 
+### Username
+
+1. `Your Patreon account page <Username>.`
+
 ### Identification
 
 1. `To get your campaign <ID>, you will need to go to your Patreon page.`
@@ -33,10 +37,6 @@
 3. `It will show a few tabs near the top, you want to click on <Sources>`
 4. `It will then bring up 2 more additional tabs, make sure you're on the <Page> tab. Go into directory <top/www.patreon.com/Username>, you will see your specific username, click on your name to bring up the HTML file if not already on it.`
 5. `You want to find query string <creator.id>, which is under a <script> tag and <window.patreon.bootstrap>, on line <220> for me, it might be a bit off for you.`
-
-### Username
-
-1. `Your Patreon account page <Username>.`
 
 ## Documentation
 
@@ -48,102 +48,156 @@
 
 ## Heroku API
 
-### Endpoint
-
-- Decoded: `https://aceasin-patreon.herokuapp.com/<Username>`
-- Encoded: `https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>`
-
 ### Usage
+
+- Endpoint
+  - Decoded: `https://aceasin-patreon.herokuapp.com/<Username>`
+  - Encoded: `https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>`
 
 - Hypertext Markup Language (HTML)
 
-  ```html
-  <a href='https://patreon.com/<Username>' title='Patreon'><img src='https://img.shields.io/endpoint?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>&color=FF5441&label=Patreon&logo=Patreon&logoColor=FFFFFF&style=for-the-badge'alt="Patreon"/> </a>
-  ```
+  - Patron Count
+
+    ```HTML
+    <a href="https://patreon.com/<Username>"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
+    ```
+
+  - Pledge Sum
+
+    ```HTML
+    <a href="https://patreon.com/<Username>"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"/> </a>
+    ```
 
 - Markdown (MD)
 
-  ```md
-  [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/<Username>)
-  ```
+  - Patron Count
+
+    ```MD
+    [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/<Username>)
+    ```
+
+  - Pledge Sum
+
+    ```MD
+    [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/<Username>)
+    ```
 
 ### Example
 
-- Patron Count
+- Endpoint
+  - Decoded: [`https://aceasin-patreon.herokuapp.com/AceAsin`](https://aceasin-patreon.herokuapp.com/AceAsin)
+  - Encoded: [`https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin`](https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin)
 
-  ```HTML
-  <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
-  ```
+- Hypertext Markup Language (HTML)
 
-  <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
+  - Patron Count
 
-  ```MD
-  [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
-  ```
+    ```HTML
+    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
+    ```
 
-  [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
+    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
 
-- Pledge Sum
+  - Pledge Sum
 
-  ```HTML
-  <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"/> </a>
-  ```
+    ```HTML
+    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"/> </a>
+    ```
 
-  <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"/> </a>
+    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"/> </a>
 
-  ```MD
-  [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
-  ```
+- Markdown (MD)
 
-  [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
+  - Patron Count
+
+    ```MD
+    [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
+    ```
+
+    [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
+
+  - Pledge Sum
+
+    ```MD
+    [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
+    ```
+
+    [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
 
 ## Patreon API
 
-### Endpoint
-
-- Decoded: `https://www.patreon.com/api/campaigns/<ID>`
-- Encoded: `https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F<ID>`
-
 ### Usage
+
+- Endpoint
+  - Decoded: `https://www.patreon.com/api/campaigns/<ID>`
+  - Encoded: `https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F<ID>`
 
 - Hypertext Markup Language (HTML)
 
-  ```html
-  <a href='https://patreon.com/<Username>' title='Patreon'><img src='https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F<ID>&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge' alt="Patreon"/> <a/>
-  ```
+  - Patron Count
+
+    ```HTML
+    <a href="https://patreon.com/<Username>"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F<ID>&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
+    ```
+
+  - Pledge Sum
+
+    ```HTML
+    <a href="https://patreon.com/<Username>"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F<ID>&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
+    ```
 
 - Markdown (MD)
 
-  ```md
-  [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F<ID>&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/<Username>)
-  ```
+  - Patron Count
+
+    ```MD
+    [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F<ID>&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/<Username>)
+    ```
+
+  - Pledge Sum
+
+    ```MD
+    [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F<ID>&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/<Username>)
+    ```
 
 ### Example
 
-- Patron Count
+- Endpoint
+  - Decoded: [`https://www.patreon.com/api/campaigns/1839759`](https://www.patreon.com/api/campaigns/1839759)
+  - Encoded: [`https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759`](https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759)
 
-  ```HTML
-  <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
-  ```
+- Hypertext Markup Language (HTML)
 
-  <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
+  - Patron Count
 
-  ```MD
-  [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
-  ```
+    ```HTML
+    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
+    ```
 
-  [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
+    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
 
-- Pledge Sum
+  - Pledge Sum
 
-  ```HTML
-  <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
-  ```
+    ```HTML
+    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
+    ```
 
-  <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
+    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
 
-  ```MD
-  [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
-  ```
+- Markdown (MD)
 
-  [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
+  - Patron Count
+
+    ```MD
+    [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
+    ```
+
+    [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
+
+  - Pledge Sum
+
+    ```MD
+    [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
+    ```
+
+    [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
