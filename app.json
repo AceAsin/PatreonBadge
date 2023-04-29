@@ -1,7 +1,0 @@
-{
-  "name": "Patreon Badge",
-  "description": "Shields badge that utilizes a Heroku endpoint or Patreon endpoint to display patron count or pledge sum.",
-  "repository": "https://github.com/AceAsin/PatreonBadge",
-  "keywords": ["aceasin", "patreon", "heroku", "shields", "badge"],
-  "env": {}
-}

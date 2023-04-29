@@ -1,12 +1,12 @@
 {
-  "name": "aceasin-patreon",
+  "name": "patreon-badge",
   "version": "1.0.0",
   "description": "",
-  "main": "Index.js",
+  "main": "Patreon.js",
   "scripts": {
-    "start": "node Index.js",
+    "start": "node Patreon.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "node .": "node run Index.js"
+    "node .": "node run Patreon.js"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,6 @@
   "keywords": [
     "aceasin",
     "patreon",
-    "heroku",
     "shields",
     "badge"
   ],
@@ -26,7 +25,6 @@
   },
   "homepage": "https://github.com/AceAsin/PatreonBadge#readme",
   "dependencies": {
-    "httpie": "^1.1.2",
-    "jsdom": "^13.2.0"
+    "axios": "^1.4.0"
   }
 }

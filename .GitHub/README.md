@@ -1,130 +1,46 @@
 # Patreon Badge
 
-<a href="https://heroku.com/deploy?template=https://github.com/AceAsin/PatreonBadge"><image src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"> </a>
+## About
 
-<!-- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AceAsin/PatreonBadge) -->
+> - A campaign identification is required in order to use this method, which utilizes Patreon's Official API. Visit a Patreon page and inspect it, then type one of the options below on the browser console to get the campaign identification. Alternatively, you're able to get a campaign identification by running the scraper app and entering a username when prompted.
+> - The monthly pledge sum will not display if the owner of the page has their earnings set to private. It is recommended to set your earnings to public in order to be able to get the pledge sum.
+> - Replace any text inside angle brackets with your own, usually '\<Username>' and or '\<ID>'. Don't forget to exclude the angle brackets, please do not include '<' or '>' once the text inside has been replaced.
 
-## Attention
+## Console
 
-### Note
+### Campaign
 
-- Important
+```css
+window.patreon.bootstrap.campaign.data.id
+```
 
-  For usage, replace any text inside angle brackets with your own, usually '\<Username>' and or '\<ID>'. Don't forget to exclude the angle brackets, please do not include '<' or '>' once the text inside has been replaced.
+### Creator
 
-- Heroku API
+```css
+window.patreon.bootstrap.creator.data.id
+```
 
-  I recommend to host your own version of this repository on your Heroku account if you want the app to stay on 24/7. It is hosted on a free account, so at the end of each month it will probably not be online due to usage, since a free account with a credit/debit card attached for billing can only get up to 1000 hours/month. I can also turn it off at any given time that I wish for.
+## Scraper
 
-- Patreon API
+### Install
 
-  You will need to get your campaign \<ID> in order to use the second method, which utilizes Patreon's Official API. You are also not able to get the monthly pledge sum if your earnings are set to private, and instead will be welcomed with an error message. It is recommended to set your earnings to public in order to be able to get the pledge sum.
+```js
+  npm i
+```
 
-  The second method is easier and more flexible if you want to change the prefix and suffix on the fly, without having to update any files, only the dynamic badge url. You also don't have to setup anything in advance, like host your own endpoint.
+### Start
 
-  The second method is also more consistant and reliable, since if hosting on Heroku, web apps love to go to sleep after a while. If nobody is using or going into a page that utilizes the app, then it will fall asleep. You might notice that if hosting the app after a while when you visit your page, it will not display the badge, due to the app falling asleep, but reloading the page will display it, since the app has been awoken from a recent visit.
+```js
+  npm start
+```
 
-## Help
+## Badge
 
-### Username
+### Documentation
 
-1. `Your Patreon account page <Username>.`
+- [Shields](https://shields.io/#/endpoint)
 
-### Identification
-
-1. `To get your campaign <ID>, you will need to go to your Patreon page.`
-2. `Type <CTRL + SHIFT + I> on your keyboard, or right click and then left click <Inspect> section, which will open up the inspect panel.`
-3. `It will show a few tabs near the top, you want to click on <Sources>`
-4. `It will then bring up 2 more additional tabs, make sure you're on the <Page> tab. Go into directory <top/www.patreon.com/Username>, you will see your specific username, click on your name to bring up the HTML file if not already on it.`
-5. `You want to find query string <creator.id>, which is under a <script> tag and <window.patreon.bootstrap>, on line <220> for me, it might be a bit off for you.`
-
-## Documentation
-
-- Shields
-  > Please visit [shields](https://shields.io/#/endpoint) for full documentation on endpoint usage.
-
-- Patreon
-  > Please visit [patreon](https://docs.patreon.com/#api-endpoints) for full documentation on endpoint usage.
-
-## Heroku API
-
-### Usage
-
-- Endpoint
-  - Decoded: `https://aceasin-patreon.herokuapp.com/<Username>`
-  - Encoded: `https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>`
-
-- Hypertext Markup Language (HTML)
-
-  - Patron Count
-
-    ```HTML
-    <a href="https://patreon.com/<Username>"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
-    ```
-
-  - Pledge Sum
-
-    ```HTML
-    <a href="https://patreon.com/<Username>"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"/> </a>
-    ```
-
-- Markdown (MD)
-
-  - Patron Count
-
-    ```MD
-    [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/<Username>)
-    ```
-
-  - Pledge Sum
-
-    ```MD
-    [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2F<Username>%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/<Username>)
-    ```
-
-### Example
-
-- Endpoint
-  - Decoded: [`https://aceasin-patreon.herokuapp.com/AceAsin`](https://aceasin-patreon.herokuapp.com/AceAsin)
-  - Encoded: [`https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin`](https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin)
-
-- Hypertext Markup Language (HTML)
-
-  - Patron Count
-
-    ```HTML
-    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
-    ```
-
-    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
-
-  - Pledge Sum
-
-    ```HTML
-    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"/> </a>
-    ```
-
-    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"/> </a>
-
-- Markdown (MD)
-
-  - Patron Count
-
-    ```MD
-    [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
-    ```
-
-    [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
-
-  - Pledge Sum
-
-    ```MD
-    [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
-    ```
-
-    [![Patreon](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Faceasin-patreon.herokuapp.com%2FAceAsin%2Fpledges&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
-
-## Patreon API
+- [Patreon](https://docs.patreon.com/#api-endpoints)
 
 ### Usage
 
