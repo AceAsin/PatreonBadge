@@ -1,5 +1,9 @@
 # Patreon
 
+[![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
+
+[![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
+
 ## About
 
 > - A campaign identification is required in order to use this method. Visit a Patreon page and inspect it, then type one of the options below on the browser console to get the campaign identification. Alternatively, you're able to get a campaign identification by running the scraper app and entering a username when prompted.
@@ -90,15 +94,11 @@ window.patreon.bootstrap.creator.data.id
     <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
     ```
 
-    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
-
   - Pledge Sum
 
     ```HTML
     <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
     ```
-
-    <a href="https://patreon.com/AceAsin"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge" alt="Patreon"> </a>
 
 - Markdown (MD)
 
@@ -108,12 +108,8 @@ window.patreon.bootstrap.creator.data.id
     [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
     ```
 
-    [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.patron_count&suffix=%20Patrons&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
-
   - Pledge Sum
 
     ```MD
     [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
     ```
-
-    [![Patreon](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F1839759&query=data.attributes.pledge_sum&prefix=$%20&suffix=%20USD%20/%20MO&color=FF5441&label=Patreon&logo=Patreon&logoColor=FF5441&style=for-the-badge)](https://patreon.com/AceAsin)
