@@ -1,8 +1,8 @@
-# Patreon Badge
+# Patreon
 
 ## About
 
-> - A campaign identification is required in order to use this method, which utilizes Patreon's Official API. Visit a Patreon page and inspect it, then type one of the options below on the browser console to get the campaign identification. Alternatively, you're able to get a campaign identification by running the scraper app and entering a username when prompted.
+> - A campaign identification is required in order to use this method. Visit a Patreon page and inspect it, then type one of the options below on the browser console to get the campaign identification. Alternatively, you're able to get a campaign identification by running the scraper app and entering a username when prompted.
 > - The monthly pledge sum will not display if the owner of the page has their earnings set to private. It is recommended to set your earnings to public in order to be able to get the pledge sum.
 > - Replace any text inside angle brackets with your own, usually '\<Username>' and or '\<ID>'. Don't forget to exclude the angle brackets, please do not include '<' or '>' once the text inside has been replaced.
 
